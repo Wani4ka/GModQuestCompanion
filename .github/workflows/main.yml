@@ -1,0 +1,25 @@
+name: Publish
+
+on: push
+
+jobs:
+	publish:
+		name: Publish
+		runs-on: ubuntu-latest
+		steps:
+			- name: Install Lua/LuaJIT
+				uses: leafo/gh-actions-lua@v8.0.0
+				with:
+					luaVersion: "5.1"
+			- name: Perform compress
+				run: |
+					cp -r _src/lua lua
+					cd compress
+					lua app.lua files_to_compress.dat
+			- name: Perform compress
+				run: cd compress && lua files_to_compress.dat
+			- name: Release
+				uses: softprops/action-gh-release@v1
+				if: startsWith(github.ref, 'refs/tags/')
+				with:
+					files: lua
