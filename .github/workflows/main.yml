@@ -13,6 +13,7 @@ jobs:
           luaVersion: "5.1"
       - name: Perform compress
         run: |
+          ls
           cp -r _src/lua lua
           cd compress
           lua app.lua files_to_compress.dat
