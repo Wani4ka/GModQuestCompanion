@@ -6,3 +6,5 @@
 !compress/**
 !.github/**
 !.gitignore
+!LICENSE_Lua51
+!LICENSE
