@@ -21,7 +21,7 @@ This addon can help the mapper create a quest map in Garry's Mod without diving 
 - **Localization of messages**.
 
 ## Installation, setup and so on
-You can find all the required information on the [[Wiki]](https://github.com/Wani4ka/GModQuests/wiki/Home-en-US). In case you encounter any other difficulties, create an [[Issue]](https://github.com/Wani4ka/GModQuests/issues), and you will get help.
+You can find all the required information on the [Wiki](https://github.com/Wani4ka/GModQuests/wiki/Home-en-US). In case you encounter any other difficulties, create an [Issue](https://github.com/Wani4ka/GModQuests/issues), and you will get help.
 
 ---
 
@@ -47,4 +47,4 @@ You can find all the required information on the [[Wiki]](https://github.com/Wan
 - **Локализация сообщений**.
 
 ### Установка, настройка и так далее
-Всю необходимую информацию можно найти на [[Вики]](https://github.com/Wani4ka/GModQuests/wiki/Home). В случае, если вы столкнётесь с какими-либо другими трудностями, создайте [[Issue]](https://github.com/Wani4ka/GModQuests/issues), и вам помогут.
+Всю необходимую информацию можно найти на [Вики](https://github.com/Wani4ka/GModQuests/wiki/Home). В случае, если вы столкнётесь с какими-либо другими трудностями, создайте [Issue](https://github.com/Wani4ka/GModQuests/issues), и вам помогут.
