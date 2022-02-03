@@ -12,15 +12,16 @@ jobs:
         with:
           luaVersion: "5.1"
       - name: Perform compress
+        shell: bash
         run: |
           ls
-          cp -r _src/lua lua
-          cd compress
-          lua app.lua files_to_compress.dat
-      - name: Perform compress
-        run: cd compress && lua files_to_compress.dat
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: luax
+      #     cp -r _src/lua lua
+      #     cd compress
+      #     lua app.lua files_to_compress.dat
+      # - name: Perform compress
+      #   run: cd compress && lua files_to_compress.dat
+      # - name: Release
+      #   uses: softprops/action-gh-release@v1
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   with:
+      #     files: luax
