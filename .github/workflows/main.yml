@@ -17,6 +17,9 @@ jobs:
           cp -r _src/lua lua
           cd compress
           lua app.lua files_to_compress.dat
+      - uses: edgarrc/action-7z@v1
+        with:
+          args: 7z a -t7z -mx=9 companion.7z ./lua/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -24,4 +27,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            lua
+            companion.7z
