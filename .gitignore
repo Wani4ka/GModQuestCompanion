@@ -1,0 +1,7 @@
+# Ignore everything
+*
+# But descend into directories
+!*/
+!_src/**
+!compress/**
+!.gitignore

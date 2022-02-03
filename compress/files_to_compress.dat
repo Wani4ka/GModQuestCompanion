@@ -1,0 +1,3 @@
+../lua/autorun/client/cl_logs.lua
+../lua/autorun/client/cl_quests.lua
+../lua/autorun/server/sv_quests.lua
