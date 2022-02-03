@@ -25,5 +25,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           title: "Latest release"
+          prerelase: false
           files: |
             companion.7z
