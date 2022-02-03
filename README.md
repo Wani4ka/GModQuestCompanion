@@ -1,4 +1,4 @@
-# GModQuestCompanion
+# Wani4ka Quests
 Lua companion for mappers who make quest maps [[По-русски]](#russian)
 
 This addon can help the mapper create a quest map in Garry's Mod without diving into the study of Lua. At the moment, the addon has the following features:
@@ -20,29 +20,8 @@ This addon can help the mapper create a quest map in Garry's Mod without diving 
 - **Ability to replace the list of players with the message history**;
 - **Localization of messages**.
 
-## Installation
-1. Download [the companion.7z archive from the release](https://github.com/Wani4ka/GModQuestCompanion/releases/latest);
-2. Unpack it into the addon folder.
-As a result, you will get a structure like this
-```
-Addon
-├ lua
-│ ├ autorun
-│ │ ├ client
-│ │ │ ├ ...
-│ │ ├ server
-│ │ │ ├ ...
-│ │ ├ config.lua
-├ maps
-│ ├ ...
-├ addon.json
-```
-
-## Setup
-*TODO*
-
-## Localization
-*TODO*
+## Installation, setup and so on
+You can find all the required information on the [[Wiki]](https://github.com/Wani4ka/GModQuests/wiki/Home-en-US). In case you encounter any other difficulties, create an [[Issue]](https://github.com/Wani4ka/GModQuests/issues), and you will get help.
 
 ---
 
@@ -67,26 +46,5 @@ Addon
 - **Возможность заменить список игроков на историю сообщений**;
 - **Локализация сообщений**.
 
-### Установка
-1. Скачать [архив companion.7z из релиза](https://github.com/Wani4ka/GModQuestCompanion/releases/latest);
-2. Распаковать его в папку аддона.
-В итоге получится структура вида
-```
-Аддон
-├ lua
-│ ├ autorun
-│ │ ├ client
-│ │ │ ├ ...
-│ │ ├ server
-│ │ │ ├ ...
-│ │ ├ config.lua
-├ maps
-│ ├ ...
-├ addon.json
-```
-
-### Настройка
-*TODO*
-
-### Локализация
-*TODO*
+### Установка, настройка и так далее
+Всю необходимую информацию можно найти на [[Вики]](https://github.com/Wani4ka/GModQuests/wiki/Home). В случае, если вы столкнётесь с какими-либо другими трудностями, создайте [[Issue]](https://github.com/Wani4ka/GModQuests/issues), и вам помогут.
