@@ -33,7 +33,7 @@ jobs:
           lua app.lua files_to_compress.dat
       - uses: edgarrc/action-7z@v1
         with:
-          args: 7z a -t7z -mx=9 4wk_quests_v${{steps.next_semantic_version.outputs.version_tag}}.7z ./lua/
+          args: 7z a -t7z -mx=9 4wk_quests_${{steps.next_semantic_version.outputs.version_tag}}.7z ./lua/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
