@@ -2,22 +2,20 @@ name: Publish
 
 on:
   push:
-    branch: master
+    branch: main
 
 jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Expose GitHub slug/short variables
-        uses: rlespinasse/github-slug-action@v3.x
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: paulhatch/semantic-version@v3.2
         id: next_semantic_version
         with:
-          branch: master
+          branch: main
           tag_prefix: "v"
           major_pattern: "💥"
           minor_pattern: "✨"
@@ -41,6 +39,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "v${{ steps.next_semantic_version.outputs.version }}"
           prerelease: false
-          title: "Release ${{ steps.next_semantic_version.outputs.version_tag }} (from `${{ env.GITHUB_REF_SLUG }}`)"
+          title: "Release ${{ steps.next_semantic_version.outputs.version_tag }}"
           files: |
             companion.7z
