@@ -1,5 +1,50 @@
 # GModQuestCompanion
-Lua companion for mappers who make quest maps [[Jump to English]](#english)
+Lua companion for mappers who make quest maps [[По-русски]](#russian)
+
+This addon can help the mapper create a quest map in Garry's Mod without diving into the study of Lua. At the moment, the addon has the following features:
+
+- Disabled noclip on the map;
+- Disabled context menu and Q-menu from Sandboxa;
+- Disabled annoying hints that they can be turned off in the context menu (🤦‍♂️);
+- The ability to disable the use of a flashlight;
+- The ability to specify player...
+  - Walk speed;
+  - Slow walk speed;
+  - Run speed;
+  - Ladder climb speed;
+- Ability to disable the standard weapons given when entering the map;
+- Ability to disable any damage;
+- Ability to disable fall damage (and the corresponding sound);
+- Ability to disable the rendering of the amount of health;
+- **Ability to display any message on the screen to the player**;
+- **Ability to replace the list of players with the message history**;
+- **Localization of messages**.
+
+## Installation
+1. Download [the companion.7z archive from the release](https://github.com/Wani4ka/GModQuestCompanion/releases/latest);
+2. Unpack it into the addon folder.
+As a result, you will get a structure like this
+```
+Addon
+├ lua
+│ ├ autorun
+│ │ ├ client
+│ │ │ ├ ...
+│ │ ├ server
+│ │ │ ├ ...
+│ │ ├ config.lua
+├ maps
+│ ├ ...
+├ addon.json
+```
+
+## Setup
+*TODO*
+
+## Localization
+*TODO*
+
+---
 
 ## Russian
 
@@ -23,7 +68,7 @@ Lua companion for mappers who make quest maps [[Jump to English]](#english)
 - **Локализация сообщений**.
 
 ### Установка
-1. Скачать архив из релиза;
+1. Скачать [архив companion.7z из релиза](https://github.com/Wani4ka/GModQuestCompanion/releases/latest);
 2. Распаковать его в папку аддона.
 В итоге получится структура вида
 ```
@@ -44,49 +89,4 @@ Lua companion for mappers who make quest maps [[Jump to English]](#english)
 *TODO*
 
 ### Локализация
-*TODO*
-
-## English
-
-This addon can help the mapper create a quest map in Garry's Mod without diving into the study of Lua. At the moment, the addon has the following features:
-
-- Disabled noclip on the map;
-- Disabled context menu and Q-menu from Sandboxa;
-- Disabled annoying hints that they can be turned off in the context menu (🤦‍♂️);
-- The ability to disable the use of a flashlight;
-- The ability to specify player...
-  - Walk speed;
-  - Slow walk speed;
-  - Run speed;
-  - Ladder climb speed;
-- Ability to disable the standard weapons given when entering the map;
-- Ability to disable any damage;
-- Ability to disable fall damage (and the corresponding sound);
-- Ability to disable the rendering of the amount of health;
-- **Ability to display any message on the screen to the player**;
-- **Ability to replace the list of players with the message history**;
-- **Localization of messages**.
-
-### Installation
-1. Download the archive from the release;
-2. Unpack it into the addon folder.
-As a result, you will get a structure like this
-```
-Addon
-├ lua
-│ ├ autorun
-│ │ ├ client
-│ │ │ ├ ...
-│ │ ├ server
-│ │ │ ├ ...
-│ │ ├ config.lua
-├ maps
-│ ├ ...
-├ addon.json
-```
-
-### Setup
-*TODO*
-
-### Localization
 *TODO*

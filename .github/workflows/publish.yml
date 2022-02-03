@@ -22,10 +22,10 @@ jobs:
           format: "${major}.${minor}.${patch}"
           short_tags: false
           bump_each_commit: true
-      - uses: leafo/gh-actions-lua@v8.0.0
+      - name: Perform compress
+        uses: leafo/gh-actions-lua@v8.0.0
         with:
           luaVersion: "5.1"
-      - name: Perform compress
         shell: bash
         run: |
           cp -r _src/lua lua
@@ -33,12 +33,12 @@ jobs:
           lua app.lua files_to_compress.dat
       - uses: edgarrc/action-7z@v1
         with:
-          args: 7z a -t7z -mx=9 companion.7z ./lua/
+          args: 7z a -t7z -mx=9 4wk_quests_v${{steps.next_semantic_version.outputs.version_tag}}.7z ./lua/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ steps.next_semantic_version.outputs.version }}"
+          automatic_release_tag: "v${{steps.next_semantic_version.outputs.version}}"
           prerelease: false
-          title: "${{ steps.next_semantic_version.outputs.version_tag }}"
+          title: "${{steps.next_semantic_version.outputs.version_tag}}"
           files: |
-            companion.7z
+            4wk_quests_${{steps.next_semantic_version.outputs.version_tag}}.7z
