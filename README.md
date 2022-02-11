@@ -1,6 +1,10 @@
 # Wani4ka Quests
 Lua companion for mappers who make quest maps [[По-русски]](#russian)
 
+[![HitCount](http://hits.dwyl.com/Wani4ka/GModQuests.svg?style=flat)](http://hits.dwyl.com/Wani4ka/GModQuests) [![GModCrossfades](https://img.shields.io/badge/see%20also-GModCrossfades-brightgreen)](https://github.com/Wani4ka/GModCrossfades)
+
+---
+
 This addon can help the mapper create a quest map in Garry's Mod without diving into the study of Lua. At the moment, the addon has the following features:
 
 - Disabled noclip on the map;
