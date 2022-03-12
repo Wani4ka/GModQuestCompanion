@@ -1,14 +1,8 @@
 if game.GetMap() ~= MapConfig.MapID then return end
 
-util.AddNetworkString('quest.sendLines')
-
-function Postsoviet_Text(hold, type, ...)
-	net.Start('quest.sendLines')
-		net.WriteTable({...})
-		net.WriteInt(hold, 10)
-		net.WriteInt(type, 5)
-	net.Broadcast()
-end
+util.AddNetworkString 'quest.sendTyped'
+util.AddNetworkString 'quest.sendCustom'
+util.AddNetworkString 'quest.hide'
 
 hook.Add('PlayerNoClip', 'quests', function() return false end)
 hook.Add('PlayerSwitchFlashlight','quests', function()
@@ -18,17 +12,18 @@ hook.Add('PlayerSwitchFlashlight','quests', function()
 end)
 
 hook.Add('PlayerSpawn', 'quests', function(ply)
-	if not MapConfig.StripWeapons then return end
+	local walk, slowWalk, run, climb = MapConfig.PlayerWalkSpeed, MapConfig.PlayerSlowWalkSpeed, MapConfig.PlayerRunSpeed, MapConfig.PlayerClimbSpeed
+	if not (walk or slowWalk or run or climb) then return end
 	timer.Simple(0, function()
 		if not ply:IsValid() then return end
-		ply:SetWalkSpeed(MapConfig.PlayerWalkSpeed)
-		ply:SetSlowWalkSpeed(MapConfig.PlayerSlowWalkSpeed)
-		ply:SetRunSpeed(MapConfig.PlayerRunSpeed)
-		ply:SetLadderClimbSpeed(MapConfig.PlayerClimbSpeed)
+		if walk then ply:SetWalkSpeed(walk) end
+		if slowWalk then ply:SetSlowWalkSpeed(slowWalk) end
+		if run then ply:SetRunSpeed(run) end
+		if climb then ply:SetLadderClimbSpeed(climb) end
 	end)
 end)
 
-hook.Add('PlayerLoadout', 'Postsoviet.NoWeapons', function()
+hook.Add('PlayerLoadout', 'quests', function()
 	if MapConfig.StripWeapons then
 		return true
 	end

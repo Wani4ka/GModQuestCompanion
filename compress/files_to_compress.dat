@@ -1,3 +1,6 @@
 ../lua/autorun/client/cl_logs.lua
 ../lua/autorun/client/cl_quests.lua
 ../lua/autorun/server/sv_quests.lua
+../lua/entities/quest_text_timed/init.lua
+../lua/entities/quest_text_timed/qt_validate.lua
+../lua/entities/quest_text_toggleable/init.lua

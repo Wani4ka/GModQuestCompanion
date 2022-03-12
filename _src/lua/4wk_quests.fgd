@@ -1,0 +1,61 @@
+@include "base.fgd"
+
+@BaseClass base(Targetname) = quest_text_toggleable : "Quest text that stays on screen until HideFrom* input is called"
+[
+	// Keys (required)
+	localizationkeys(string)	: "Localization Keys" : "" : "Comma-separated list of localization keys to show. You can also use [$nl] to make an empty line"
+	fadein(float)				: "Fade in" : "0.25" : "Amount of seconds for lines to appear on the screen"
+	fadeinstyle(choices)		: "Multiline Fade-In Style" : "together" : "How should lines fade in" =
+	[
+		"together" : "Show all the lines simultaneously"
+		"independently" : "Show next line after current line is fully shown"
+	]
+	fadeindelay(float)			: "Fade-In Delay" : "0" : "Doesn't do anything if fadeinstyle is 'together'. Amount of seconds for each line to wait after the previous line is fully shown"
+	fadeout(float)				: "Fade out" : "0.25" : "Amount of seconds for lines to hide from the screen"
+	fadeoutstyle(choices)		: "Multiline Fade-Out Style" : "together" =
+	[
+		"together" : "Hide all lines simultaneously"
+		"independently" : "Hide next line after current line is fully hidden"
+	]
+	fadeoutdelay(float)			: "Fade-Out Delay" : "0" : "Doesn't do anything if fadeoutstyle is 'together'. Amount of seconds for each line to wait after the previous line is fully hidden"
+
+	// This one line can replace all the keyvalues below
+	type(string)				: "Type Name" : "" : "Name of the text type defined in script's config.lua"
+
+	// Only useful if type isn't specified
+	marginleft(float)			: "Margin Left" : "" : "Doesn't do anything if Type is specified. If X > 1, the lines will be X pixels to the right from the game left border. If 0 <= X <= 1, the lines will be X*(screen width) pixels to the right from the game left border"
+	margintop(float)			: "Margin Top" : "" : "Doesn't do anything if Type is specified. If X > 1, the first line will be X pixels lower than the game top border. If 0 <= X <= 1, the first line will be X*(screen height) pixels lower than the game top border"
+	marginright(float)			: "Margin Right" : "" : "Doesn't do anything if Type is specified. If X > 1, the lines will be X pixels to the left from the game right border. If 0 <= X <= 1, the lines will be X*(screen width) pixels to the left from the game right border"
+	marginbottom(float)			: "Margin Bottom" : "" : "Doesn't do anything if Type is specified. If X > 1, the last line will be X pixels higher than the game bottom border. If 0 <= X <= 1, the last line will be X*(screen height) pixels higher than the game bottom border"
+	fontname(string)			: "Font Name" : "" : "Doesn't do anything if Type is specified. The font source. Must be the actual 'nice' font, not a file name."
+	fontsize(float)				: "Font Size" : "" : "Doesn't do anything if Type is specified. The font height in pixels. If float specified, it will get multiplied by screen height to get actual font size."
+	fontweight(integer)			: "Font Weight" : 500 : "Doesn't do anything if Type is specified. The font boldness"
+	alignment(choices)			: "Horizontal Alignment of Lines" : "center" =
+	[
+		"left" : "Align left"
+		"center" : "Align center"
+		"right" : "Align right"
+	]
+	textcolor(color255)			: "Text Color" : "255 255 255" : "Doesn't do anything if Type is specified. The color of lines"
+	spawnflags(flags)			=
+	[
+		1 : "Add an underline to the font" : 0
+		2 : "Make the font italic" : 0
+		4 : "Add a strike through" : 0
+	]
+
+
+	// Inputs
+	input ShowToActivator(void)	: "Show to activator"
+	input ShowToEveryone(void)	: "Show to all players"
+	input HideFromActivator(void)	: "Hide from activator"
+	input HideFromEveryone(void)	: "Hide from all players"
+]
+
+
+@BaseClass base(Targetname, quest_text_toggleable) = quest_text_timed : "Quest text that stays on screen for a specified period of time"
+[
+	// Keys (required)
+	length(float)				: "Length" : "10" : "Amount of seconds for lines to be shown"
+	showinlogs(boolean)			: "Show in Logs" : 1 : "If logs are enabled in script's config.lua and this is set to 1, players will be able to review these lines by holding Tab"
+]
