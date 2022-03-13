@@ -6,14 +6,7 @@ MapConfig.MapID					= 'wanichka_quest'
 MapConfig.ShutUp				= false
 
 
-MapConfig.EnableFlashlight		= false
-MapConfig.EnableDamage			= false
-MapConfig.EnableFallDamage		= false
 MapConfig.StripWeapons			= true
-MapConfig.PlayerWalkSpeed		= 100	-- 200 in sandbox; has to be 7+ or players won't be able to move
-MapConfig.PlayerSlowWalkSpeed	= 50	-- 100 in sandbox
-MapConfig.PlayerRunSpeed		= 160	-- 400 in sandbox
-MapConfig.PlayerClimbSpeed		= 50	-- 200 in sandbox
 
 MapConfig.Name					= 'Sample Wani4ka Quest' -- shown in scoreboard
 
@@ -26,8 +19,6 @@ MapConfig.LocalePrefix			= 'ps' -- looks up for `{LocalePrefix}.{Key}` localizat
 -- if set to true, players will be able to view past lines of text in console & scoreboard
 -- otherwise the scoreboard will be default
 MapConfig.EnableLogs			= true
-
-MapConfig.ShowHealth			= false -- restart the map after changing it
 
 MapConfig.TypesData = {
 	['printedText'] = {

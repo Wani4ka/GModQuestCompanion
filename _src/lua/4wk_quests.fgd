@@ -1,5 +1,45 @@
 @include "base.fgd"
 
+@BaseClass base(Targetname) = quest_config : "Allows to change player properties"
+[
+	// Keys (required)
+	static(boolean)				: "Apply on Map Load" : 0
+	flashlight(choices)			: "Flashlight" : "unset" : "If disabled, players won't be able to turn flashlight on" =
+	[
+		"unset" : "Do not change"
+		"yes" : "Enable"
+		"no" : "Disable"
+	]
+	damage(choices)				: "Damage" : "unset" : "Disable if players aren't supposed to take any damage" =
+	[
+		"unset" : "Do not change"
+		"yes" : "Enable"
+		"no" : "Disable"
+	]
+	falldamage(choices)			: "Fall Damage" : "unset" : "Disable if players aren't supposed to take fall damage. It can also disable the sound of breaking the leg" =
+	[
+		"unset" : "Do not change"
+		"yes" : "Enable"
+		"no" : "Disable"
+	]
+	walkspeed(integer)			: "Player Walk Speed" : 200 : "Negative values do not change anything"
+	slowwalkspeed(integer)		: "Player Slow Walk Speed" : 100 : "Negative values do not change anything"
+	runspeed(integer)			: "Player Run Speed" : 400 : "Negative values do not change anything"
+	climbspeed(integer)			: "Player Ladder Climb Speed" : 200 : "Negative values do not change anything"
+	crouchspeed(float)			: "Player Crouch Speed" : "0.3" : "Negative values do not change anything. This should be a number in [0;1] range, as the multiplier for player walk speed"
+	jumppower(integer)			: "Player Jump Power" : 200 : "Negative values do not change anything"
+	showhealth(choices)			: "Health Status" : "unset" =
+	[
+		"unset" : "Do not change"
+		"yes" : "Enable"
+		"no" : "Disable"
+	]
+
+	// Inputs
+	input ApplyOnActivator(void)	: "Apply on activator"
+	input ApplyOnEveryone(void)		: "Apply on all players"
+]
+
 @BaseClass base(Targetname) = quest_text_toggleable : "Quest text that stays on screen until HideFrom* input is called"
 [
 	// Keys (required)

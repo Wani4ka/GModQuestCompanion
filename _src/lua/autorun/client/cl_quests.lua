@@ -15,10 +15,11 @@ local FONT_ITALIC		= 2
 local FONT_STRIKEOUT	= 4
 
 -- HOOKS
-local showHealth = cfg.ShowHealth
+local showHealth = true
 hook.Add('HUDShouldDraw', 'quests', function(name)
 	if name == 'CHudHealth' and not showHealth then return false end
 end)
+
 local function no() return false end
 hook.Add('ContextMenuOpen', 'quests', no)
 hook.Add('SpawnMenuOpen', 'quests', no)
@@ -28,6 +29,10 @@ hook.Add('Initialize', 'quests', function()
 		GAMEMODE:SuppressHint('Annoy1')
 		GAMEMODE:SuppressHint('Annoy2')
 	end
+end)
+
+net.Receive('quest.updateClientside', function()
+	showHealth = readBool()
 end)
 
 

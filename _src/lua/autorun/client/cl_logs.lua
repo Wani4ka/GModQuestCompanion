@@ -28,7 +28,9 @@ end
 local function updateScroll()
 	local scr = qScoreboard.Logs
 	local children = scr:GetCanvas():GetChildren()
-	scr:ScrollToChild(children[#children])
+	if children[1] then
+		scr:ScrollToChild(children[#children])
+	end
 end
 
 function addLogLine(col, txt, length)
@@ -62,9 +64,8 @@ local function createScoreboard()
 	local header = pnl:Add 'Panel'
 	header:Dock(TOP)
 	header:DockMargin(0, 0, 0, 5)
-	header:SetHeight(70)
+	header:SetHeight(35)
 
-	local name = label(header, color_white, '', color_shadow)
 	local map = label(header, color_white, cfg.Name, color_shadow)
 
 	local wrap = pnl:Add 'DPanel'
@@ -96,9 +97,6 @@ local function createScoreboard()
 	authors:SetTextColor(Color(80, 80, 80))
 	authors:SetExpensiveShadow(1, color_shadow)
 
-	function pnl:Think()
-		name:SetText(GetHostName())
-	end
 	function pnl:PerformLayout()
 		self:SetSize(700, 400)
 		self:SetPos(ScrW() / 2 - 350, 100)
