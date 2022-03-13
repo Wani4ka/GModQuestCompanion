@@ -16,7 +16,9 @@ This addon can help the mapper create a quest map in Garry's Mod without diving 
   - Slow walk speed;
   - Run speed;
   - Ladder climb speed;
-- Ability to disable the standard weapons given when entering the map;
+  - Crouch speed;
+  - Jump power;
+- Ability to disable the default weapons given when entering the map;
 - Ability to disable any damage;
 - Ability to disable fall damage (and the corresponding sound);
 - Ability to disable the rendering of the amount of health;
@@ -42,6 +44,8 @@ You can find all the required information on the [Wiki](https://github.com/Wani4
   - Скорость медленной ходьбы;
   - Скорость бега;
   - Скорость взбирания по лестницам;
+  - Скорость ходьбы в приседе;
+  - Высоту прыжка;
 - Возможность отключить выдачу стандартного оружия при входе на карту;
 - Возможность отключить любой урон;
 - Возможность отключить урон от падения (и соответствующий звук);
