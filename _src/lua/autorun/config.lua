@@ -2,23 +2,23 @@ MapConfig = MapConfig or {}
 
 -- CONFIG
 
-MapConfig.MapID					= 'wanichka_quest'
-MapConfig.ShutUp				= false
+MapConfig.MapID			= 'wanichka_quest'
+MapConfig.ShutUp		= false
 
+MapConfig.EnableNoclip	= true
+MapConfig.StripWeapons	= true
 
-MapConfig.StripWeapons			= true
+MapConfig.Name			= 'Sample Wani4ka Quest' -- shown in scoreboard
 
-MapConfig.Name					= 'Sample Wani4ka Quest' -- shown in scoreboard
-
-MapConfig.Authors				= { -- shown in scoreboard
+MapConfig.Authors		= { -- shown in scoreboard
 	'Yermak',
 }
 
-MapConfig.LocalePrefix			= 'ps' -- looks up for `{LocalePrefix}.{Key}` localization string, where {Key}s are passed by map
+MapConfig.LocalePrefix	= 'ps' -- looks up for `{LocalePrefix}.{Key}` localization string, where {Key}s are passed by map
 
 -- if set to true, players will be able to view past lines of text in console & scoreboard
 -- otherwise the scoreboard will be default
-MapConfig.EnableLogs			= true
+MapConfig.EnableLogs	= true
 
 MapConfig.TypesData = {
 	['printedText'] = {

@@ -7,9 +7,9 @@ Lua companion for mappers who make quest maps [[По-русски]](#russian)
 
 This addon can help the mapper create a quest map in Garry's Mod without diving into the study of Lua. At the moment, the addon has the following features:
 
-- Disabled noclip on the map;
-- Disabled context menu and Q-menu from Sandboxa;
+- Disabled context menu and Q-menu from Sandbox;
 - Disabled annoying hints that they can be turned off in the context menu (🤦‍♂️);
+- The ability to disable noclip on the map;
 - The ability to disable the use of a flashlight;
 - The ability to specify player...
   - Walk speed;
@@ -35,9 +35,9 @@ You can find all the required information on the [Wiki](https://github.com/Wani4
 
 Этот аддон может помочь мапперу создать квест-карту в Garry's Mod, не углубляясь в изучение Lua. На данный момент аддон имеет следующие фичи:
 
-- Отключен noclip'а на карте;
 - Отключено контекстное меню и Q-меню от Sandbox'а;
 - Отключены надоедающие подсказки о том, что их можно выключить в контекстном меню (🤦‍♂️);
+- Возможность отключить noclip на карте;
 - Возможность отключить использование фонарика;
 - Возможность указать для игрока...
   - Скорость ходьбы;

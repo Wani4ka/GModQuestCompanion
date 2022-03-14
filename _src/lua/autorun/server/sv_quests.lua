@@ -5,7 +5,11 @@ util.AddNetworkString 'quest.sendCustom'
 util.AddNetworkString 'quest.hide'
 util.AddNetworkString 'quest.updateClientside'
 
-hook.Add('PlayerNoClip', 'quests', function() return false end)
+hook.Add('PlayerNoClip', 'quests', function(_, on)
+	if on and not MapConfig.EnableNoclip then
+		return false
+	end
+end)
 hook.Add('PlayerSwitchFlashlight','quests', function(ply)
 	if not ply:GetQuestProperty('flashlight') then
 		return false
