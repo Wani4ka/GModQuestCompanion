@@ -43,3 +43,4 @@ jobs:
           title: "${{steps.next_semantic_version.outputs.version_tag}}"
           files: |
             4wk_quests_${{steps.next_semantic_version.outputs.version_tag}}.7z
+            _src/4wk_quests.fgd
