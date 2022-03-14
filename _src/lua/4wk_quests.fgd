@@ -22,12 +22,12 @@
 		"yes" : "Enable"
 		"no" : "Disable"
 	]
-	walkspeed(integer)			: "Player Walk Speed" : 200 : "Negative values do not change anything"
-	slowwalkspeed(integer)		: "Player Slow Walk Speed" : 100 : "Negative values do not change anything"
-	runspeed(integer)			: "Player Run Speed" : 400 : "Negative values do not change anything"
-	climbspeed(integer)			: "Player Ladder Climb Speed" : 200 : "Negative values do not change anything"
-	crouchspeed(float)			: "Player Crouch Speed" : "0.3" : "Negative values do not change anything. This should be a number in [0;1] range, as the multiplier for player walk speed"
-	jumppower(integer)			: "Player Jump Power" : 200 : "Negative values do not change anything"
+	walkspeed(integer)			: "Player Walk Speed" : -1 : "Set to -1 if you don't want to change anything here. In Sandbox, player walk speed is 200"
+	slowwalkspeed(integer)		: "Player Slow Walk Speed" : -1 : "Set to -1 if you don't want to change anything here. In Sandbox, player slow walk speed is 100"
+	runspeed(integer)			: "Player Run Speed" : -1 : "Set to -1 if you don't want to change anything here. In Sandbox, player run speed is 400"
+	climbspeed(integer)			: "Player Ladder Climb Speed" : -1 : "Set to -1 if you don't want to change anything here. In Sandbox, player ladder climb speed is 200"
+	crouchspeed(float)			: "Player Crouch Speed" : "-1" : "Set to -1 if you don't want to change anything here. This should be a number in [0;1] range, as the multiplier for player walk speed. In Sandbox, player crouch speed is 0.3"
+	jumppower(integer)			: "Player Jump Power" : -1 : "Set to -1 if you don't want to change anything here. In Sandbox, player jump power is 200"
 	showhealth(choices)			: "Health Status" : "unset" =
 	[
 		"unset" : "Do not change"
