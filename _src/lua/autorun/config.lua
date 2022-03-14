@@ -56,6 +56,6 @@ if SERVER then return end
 surface.CreateFont('wani4kaFont', {
 	font = 'Arial', -- you can specify your custom font name
 	extended = true, 
-	size = ScrW() / 50, -- or size
+	size = ScrH() / 28, -- or size
 	weight = 1000, -- or weight
 }) -- or anything else (https://wiki.facepunch.com/gmod/surface.CreateFont)
