@@ -172,10 +172,7 @@ end)
 
 net.Receive('quest.hide', function()
 
-	local uid = readUInt(31)
-	local fadeout = readFloat()
-	local style = readString()
-	local delay = readFloat()
+	local uid, fadeout, style, delay = readUInt(31), readFloat(), readString(), readFloat()
 	if not linesBank[uid] then return end
 
 	local i = 1
