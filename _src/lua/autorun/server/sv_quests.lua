@@ -1,4 +1,4 @@
-if game.GetMap() ~= MapConfig.MapID then return end
+if game.GetMap() ~= string.lower(MapConfig.MapID) then return end
 
 util.AddNetworkString 'quest.sendTyped'
 util.AddNetworkString 'quest.sendCustom'
