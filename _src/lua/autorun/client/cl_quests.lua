@@ -1,5 +1,5 @@
 local cfg = MapConfig
-if game.GetMap() ~= cfg.MapID then return end
+if game.GetMap() ~= string.lower(cfg.MapID) then return end
 
 questsBank = questsBank or {}
 questsBank.lines = questsBank.lines or {}
