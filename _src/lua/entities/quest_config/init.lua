@@ -79,8 +79,10 @@ function ENT:AcceptInput(name, activator, caller, args)
 		return true
 	elseif name == 'applyonactivator' then
 		self:ApplyToTarget(activator)
+		return true
 	elseif name == 'applyoneveryone' then
 		self:ApplyToEveryone()
+		return true
 	end
 end
 

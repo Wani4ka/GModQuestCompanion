@@ -100,8 +100,10 @@ function ENT:AcceptInput(name, activator, caller, args)
 		return true
 	elseif name == 'showtoactivator' then
 		self:ValidateAndSend(activator)
+		return true
 	elseif name == 'showtoeveryone' then
 		self:ValidateAndSend()
+		return true
 	end
 end
 
